@@ -15,7 +15,7 @@
 		
 		<div class="container">
 			<h1>Customer Details</h1>
-			<form class="form" name="regForm">
+			<form class="form" name="regForm" class="needs-validation">
 				<label for="name">Name</label>
 				<input
 					name="name"
@@ -40,8 +40,8 @@
 				/>
 
 				<label for="movies">Movies</label>
-				<select id="movieSelect" name="movies" required>
-					<option selected="" value="">(Please select a movie)</option>
+				<select id="movieSelect" name="movies" required>		
+					<option value="">(Please select a movie)</option>
 					<option value="John Wick: Chapter I">John Wick: Chapter I</option>
 					<option value="John Wick: Chapter II">John Wick: Chapter II</option>
 					<option value="John Wick: Chapter III">John Wick: Chapter III</option>
@@ -50,7 +50,7 @@
 
 				<label for="timings">Show Timings</label>
 				<select id="timingSelect" name="timings" required>
-					<option selected="" value="">(Please select a show timings)</option>
+					<option value="">(Please select a show timings)</option>
 					<option value="9:15 AM">9:15 AM</option>
 					<option value="11:00 AM">11:00 AM</option>
 					<option value="4:00 PM">4:00 PM</option>
