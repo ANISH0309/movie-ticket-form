@@ -85,3 +85,11 @@ input[type="number"] {
 .table {
 	margin-top: 15px;
 }
+
+/* Media Query */
+
+@media screen and (max-width: 576px) {
+	.container {
+		width: 95% !important;
+	}
+}
