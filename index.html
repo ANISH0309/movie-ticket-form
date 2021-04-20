@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<title>Movie Ticket Booking</title>
+	</head>
+	<body>
+        <nav class="navbar navbar-dark bg-dark justify-content-between">
+            <h1>Welcome To Movie Ticket Booking System</h1>
+        </nav>
+		
+		<div class="container">
+			<h1>Customer Details</h1>
+			<form class="form" name="regForm">
+				<label for="name">Name</label>
+				<input
+					name="name"
+					id="name"
+					type="text"
+					placeholder="Enter your name"
+					required
+				/>
+				<label for="phone">Phone Number</label>
+				<input
+					id="phone"
+					type="tel"
+					placeholder="Enter your Phone No"
+					required
+				/>
+				<label for="email">Email</label>
+				<input
+					id="email"
+					type="email"
+					placeholder="Enter your Email"
+					required
+				/>
+
+				<label for="movies">Movies</label>
+				<select id="movieSelect" name="movies" required>
+					<option selected="" value="">(Please select a movie)</option>
+					<option value="John Wick: Chapter I">John Wick: Chapter I</option>
+					<option value="John Wick: Chapter II">John Wick: Chapter II</option>
+					<option value="John Wick: Chapter III">John Wick: Chapter III</option>
+					<option value="John Wick: Chapter IV">John Wick: Chapter IV</option>
+				</select>
+
+				<label for="timings">Show Timings</label>
+				<select id="timingSelect" name="timings" required>
+					<option selected="" value="">(Please select a show timings)</option>
+					<option value="9:15 AM">9:15 AM</option>
+					<option value="11:00 AM">11:00 AM</option>
+					<option value="4:00 PM">4:00 PM</option>
+					<option value="7:30 PM">7:30 PM</option>
+					<option value="10:45 PM">10:45 PM</option>
+				</select>
+
+				<label for="tickets">Tickets</label>
+				<label class="sub-heading" for="platinum"
+					>No of Platinum* tickets</label
+				>
+				<input id="ptn" type="number" placeholder="1" min="0" max="100" required />
+				<label class="sub-heading" for="gold">No of Gold* tickets</label>
+				<input id="gld" type="number" placeholder="0" min="0" max="100" required />
+				<label class="sub-heading" for="silver">No of Silver* tickets</label>
+				<input id="slv" type="number" placeholder="0" min="0" max="100" required />
+
+				<input onclick="addMovie(event);" class="btn btn-primary" type="submit" value="Submit" />
+
+				<label class="small-heading">*Platinum = &#x20B9 400/Ticket</label>
+				<label class="small-heading">*Gold = &#x20B9 280/Ticket</label>
+				<label class="small-heading">*Silver = &#x20B9 150/Ticket</label>
+			</form>
+		</div>
+        <h2 id='custHeading' class="custHeading">Customer Table</h2>
+        <div id="dispTable" class="table-responsive">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr class="table-headers">
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Movie</th>
+                        <th>Timing</th>
+                        <th>No of Ticket(PTN)</th>
+                        <th>No of Ticket(GLD)</th>
+                        <th>No of Ticket(SLV)</th>
+                        <th>Amount(Rs)</th>
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+            </table>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+	</body>
+</html>
+
+
